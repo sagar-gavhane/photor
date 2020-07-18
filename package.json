@@ -1,0 +1,20 @@
+{
+  "name": "photor",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "sagar",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "kill:ports": "kill-port --port 3000,3001",
+    "client": "yarn workspace client dev",
+    "server": "yarn workspace server start",
+    "start": "concurrently --kill-others-on-fail \"yarn kill:ports\" \"yarn server\"  \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
