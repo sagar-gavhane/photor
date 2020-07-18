@@ -11,7 +11,7 @@
   "scripts": {
     "kill:ports": "kill-port --port 3000,3001",
     "client": "yarn workspace client dev",
-    "server": "yarn workspace server start",
+    "server": "yarn workspace server dev",
     "start": "concurrently --kill-others-on-fail \"yarn kill:ports\" \"yarn server\"  \"yarn client\""
   },
   "dependencies": {
