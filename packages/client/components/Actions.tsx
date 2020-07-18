@@ -6,6 +6,7 @@ import { BoardSize, SocketEvent } from 'types'
 const socket: SocketIOClient.Socket = io.connect(
   process.env.NEXT_PUBLIC_SERVER_URL
 )
+console.log('(NEXT_PUBLIC_SERVER_URL)', process.env.NEXT_PUBLIC_SERVER_URL)
 
 interface ActionsProps {
   boardSize: BoardSize
